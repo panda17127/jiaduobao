@@ -9,12 +9,11 @@
       </mt-swipe>
       <div class="m-notice">
         <img class="notice-icon" src="../../assets/imgs/notice.png">
-        <div class="m-scroll">
-          <div
-          v-infinite-scroll="loadMore"
-          infinite-scroll-disabled="loading"
-          infinite-scroll-distance="100">实名认证成功用户即可联系在线客服领取2元现金红包！</div>
-        </div>
+        <mt-swipe class="m-notice-scroll" :auto="0" :speed="3000" :show-indicators="false">
+            <mt-swipe-item class="">
+              实名认证成功用户即可联系在线客服领取2元现金红包！
+            </mt-swipe-item>
+          </mt-swipe>
       </div>
     </div>
   </div>
@@ -37,10 +36,7 @@ export default {
   methods: {
     ...mapMutations({
       setNum: 'SET_NUM'
-    }),
-    loadMore() {
-      this.loading = true
-    }
+    })
     // login() {
     //   let params = {
     //     password: 'gs123456',
@@ -95,12 +91,11 @@ export default {
       .w(148);
       .h(64);
     }
-    .m-scroll {
+    .m-notice-scroll {
       width: 100%;
+      .h(64);
+      .lh(64);
       .fs(32);
-      div {
-        width: 100%;
-      }
     }
   }
 }
