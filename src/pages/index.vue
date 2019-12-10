@@ -22,19 +22,23 @@ export default {
       navList: [
         {
           'path': '/home',
-          'name': '推荐'
+          'name': '首页'
         },
         {
           'path': '/story',
-          'name': '故事'
+          'name': '投资项目'
         },
         {
           'path': '/footprints',
-          'name': '足迹'
+          'name': '会员中心'
         },
         {
           'path': '/day',
-          'name': '纪念日'
+          'name': '关于我们'
+        },
+        {
+          'path': '',
+          'name': '在线客服'
         }
       ]
     }
@@ -83,39 +87,45 @@ export default {
         box-sizing: border-box;
         display: block;
         .fs(22);
-        .tab-0, .tab-1, .tab-2, .tab-3 {
+        .tab-0, .tab-1, .tab-2, .tab-3, .tab-4 {
           display: inline-block;
           .h(42);
           .w(42);
           background-size: cover;
         }
         .tab-0 {
-          background-image: url("../assets/imgs/index-noselect.svg");
+          background-image: url("../assets/imgs/navhome.png");
         }
         .tab-1 {
-          background-image: url("../assets/imgs/note-noselect.svg");
+          background-image: url("../assets/imgs/navinvest.png");
         }
         .tab-2 {
-          background-image: url("../assets/imgs/print-noselect.svg");
+          background-image: url("../assets/imgs/navacc.png");
         }
         .tab-3 {
-          background-image: url("../assets/imgs/dy-noselect.svg");
+          background-image: url("../assets/imgs/navnews.png");
+        }
+        .tab-4 {
+           background-image: url("../assets/imgs/navborrow.png");
         }
         &:hover {
           text-decoration: none;
         }
         &.router-link-active.active {
           .tab-0 {
-            background-image: url("../assets/imgs/index-select.svg");
+            background-image: url("../assets/imgs/navhome.png");
           }
           .tab-1 {
-            background-image: url("../assets/imgs/note-select.svg");
+            background-image: url("../assets/imgs/navinvest.png");
           }
           .tab-2 {
-            background-image: url("../assets/imgs/print-select.svg");
+            background-image: url("../assets/imgs/navacc.png");
           }
           .tab-3 {
-            background-image: url("../assets/imgs/dy-select.svg");
+            background-image: url("../assets/imgs/navnews.png");
+          }
+          .tab-4 {
+            background-image: url("../assets/imgs/navborrow.png");
           }
         }
       }

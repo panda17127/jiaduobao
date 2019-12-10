@@ -34,7 +34,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   color: #2c3e50;
 }
 .Router {

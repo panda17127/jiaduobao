@@ -1,8 +1,21 @@
 <template>
   <div class="content-box">
-    <common-header :showinput="true" :showback="false"></common-header>
+    <common-header :tittle="tittle" :showback="false"></common-header>
     <div class="page-content">
-      <mt-button @click="todetail">home</mt-button>
+      <mt-swipe class="m-swiper" :auto="4000">
+        <mt-swipe-item v-for="item in bannerList" :key="item">
+          <img :src="item">
+        </mt-swipe-item>
+      </mt-swipe>
+      <div class="m-notice">
+        <img class="notice-icon" src="../../assets/imgs/notice.png">
+        <div class="m-scroll">
+          <div
+          v-infinite-scroll="loadMore"
+          infinite-scroll-disabled="loading"
+          infinite-scroll-distance="100">实名认证成功用户即可联系在线客服领取2元现金红包！</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -15,7 +28,9 @@ import commonHeader from 'common/common-header'
 export default {
   data () {
     return {
-      num: 0
+      tittle: '首页',
+      loading: false,
+      bannerList: [require('../../assets/imgs/banner01.png'), require('../../assets/imgs/banner02.png')]
     }
   },
   created() {},
@@ -23,8 +38,8 @@ export default {
     ...mapMutations({
       setNum: 'SET_NUM'
     }),
-    todetail() {
-      this.$router.togo('/Home/Detail')
+    loadMore() {
+      this.loading = true
     }
     // login() {
     //   let params = {
@@ -62,5 +77,31 @@ export default {
 @import "~styles/variable.less";
 .page-content{
   .mb(98);
+  .m-swiper{
+    width: 100%;
+    .h(400);
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .m-notice {
+    display: flex;
+    .mt(20);
+    .pl(30);
+    .pr(30);
+    .notice-icon {
+      .mr(12);
+      .w(148);
+      .h(64);
+    }
+    .m-scroll {
+      width: 100%;
+      .fs(32);
+      div {
+        width: 100%;
+      }
+    }
+  }
 }
 </style>
