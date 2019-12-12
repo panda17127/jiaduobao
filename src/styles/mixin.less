@@ -174,12 +174,24 @@
   border: @bw/@baseFontSize*1rem solid @color;
 }
 
+.bb (@bw,@color) {
+  border-bottom: @bw/@baseFontSize*1rem solid @color;
+}
+
 .lh(@px) {
   line-height: @px / @baseFontSize * 1rem;
 }
 
 .fs(@px) {
   font-size: @px / @baseFontSize * 1rem;
+}
+
+.fw() {
+  font-weight: bold;
+}
+
+.tc() {
+  text-align: center;
 }
 
 .ellipsis2() {
@@ -225,4 +237,8 @@
 
 .wordspacing(@px) {
   word-spacing: @px / @baseFontSize * 1rem;
+}
+
+.bg(@bg) {
+  background-color: @bg;
 }

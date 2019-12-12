@@ -89,6 +89,7 @@ export default {
   }
   .header-tittle{
     flex: 3;
+    .tc();
   }
   .right-icon{
     position: relative;
