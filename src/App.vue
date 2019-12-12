@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <transition :name="transitionName">
-      <router-view class="Router"></router-view>
+      <router-view class="Router" style="margin: 0 auto;"></router-view>
     </transition>
   </div>
 </template>
@@ -29,12 +29,16 @@ export default {
 
 <style lang="less">
 @import "~styles/variable.less";
+html, body, #app {
+  height: 100%;
+  background-color: #fafafa;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
   -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
+  margin: 0 auto;
   color: #2c3e50;
 }
 .Router {
@@ -44,6 +48,7 @@ export default {
   right: 0;
   width: 100%;
   height: 100%;
+  max-width: 600px;
   background-color: @body-bg-color;;
   transition: all .5s ease;
   -webkit-transition: all .5s ease;
