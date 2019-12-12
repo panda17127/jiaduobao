@@ -29,10 +29,6 @@ export default {
 
 <style lang="less">
 @import "~styles/variable.less";
-html, body, #app {
-  height: 100%;
-  background-color: #fafafa;
-}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

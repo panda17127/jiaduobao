@@ -61,15 +61,15 @@
           </div>
         </div>
       </div>
+      <commonFooter></commonFooter>
     </div>
-    <footer></footer>
   </div>
 </template>
 
 <script>
 import {mapMutations, mapGetters, mapState} from 'vuex'
 import commonHeader from 'common/common-header'
-import footer from 'common/footer'
+import commonFooter from 'common/commonFooter'
 // import * as homeApi from 'api/home-api'
 // import { ERR_OK } from 'config/index'
 export default {
@@ -157,7 +157,7 @@ export default {
   },
   components: {
     commonHeader,
-    footer
+    commonFooter
   },
   computed: {
     ...mapGetters([
