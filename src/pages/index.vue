@@ -25,7 +25,7 @@ export default {
           'name': '首页'
         },
         {
-          'path': '/story',
+          'path': '/investment',
           'name': '投资项目'
         },
         {

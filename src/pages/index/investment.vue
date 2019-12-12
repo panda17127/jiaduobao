@@ -1,8 +1,9 @@
 <template>
   <div class="content-box">
     <common-header :tittle="tittle" :showback="false"></common-header>
-      <div class="page-content">
-        <mt-button @click="todetail">story</mt-button>
+    <div class="page-content">
+      <common-list></common-list>
+      <common-footer></common-footer>
     </div>
   </div>
 </template>
@@ -10,10 +11,12 @@
 <script>
 import {mapMutations, mapGetters, mapState} from 'vuex'
 import commonHeader from 'common/common-header'
+import commonList from 'common/common-list'
+import commonFooter from 'common/common-footer'
 export default {
   data () {
     return {
-      tittle: '我的故事',
+      tittle: '投资',
       num: 0
     }
   },
@@ -27,7 +30,9 @@ export default {
     }
   },
   components: {
-    commonHeader
+    commonHeader,
+    commonList,
+    commonFooter
   },
   computed: {
     ...mapGetters([
@@ -44,7 +49,4 @@ export default {
 <style scoped lang="less">
 @import "~styles/index.less";
 @import "~styles/variable.less";
-.page-content{
-  .mb(98);
-}
 </style>
