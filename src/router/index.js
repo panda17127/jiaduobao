@@ -48,9 +48,9 @@ export default new Router({
           component: (resolve) => require(['@/pages/index/investment'], resolve)
         },
         {
-          path: '/footprints',
-          name: 'footprints',
-          component: (resolve) => require(['@/pages/index/footprints'], resolve)
+          path: '/usercenter',
+          name: 'usercenter',
+          component: (resolve) => require(['@/pages/index/usercenter'], resolve)
         },
         {
           path: '/day',
