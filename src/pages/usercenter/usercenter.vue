@@ -24,6 +24,7 @@
         </div>
       </div>
         <common-footer></common-footer>
+        <footer-guide></footer-guide>
     </div>
   </div>
 </template>
@@ -32,6 +33,7 @@
 import {mapMutations, mapGetters, mapState} from 'vuex'
 import commonHeader from 'common/common-header'
 import commonFooter from 'common/common-footer'
+import footerGuide from 'common/footer-guide'
 export default {
   data () {
     return {
@@ -53,7 +55,8 @@ export default {
   },
   components: {
     commonHeader,
-    commonFooter
+    commonFooter,
+    footerGuide
   },
   computed: {
     ...mapGetters([

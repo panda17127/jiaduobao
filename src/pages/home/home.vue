@@ -26,6 +26,7 @@
       <common-list></common-list>
       <common-footer></common-footer>
     </div>
+    <footer-guide></footer-guide>
   </div>
 </template>
 
@@ -34,6 +35,7 @@ import {mapMutations, mapGetters, mapState} from 'vuex'
 import commonHeader from 'common/common-header'
 import commonList from 'common/common-list'
 import commonFooter from 'common/common-footer'
+import footerGuide from 'common/footer-guide'
 // import * as homeApi from 'api/home-api'
 // import { ERR_OK } from 'config/index'
 export default {
@@ -102,7 +104,8 @@ export default {
   components: {
     commonHeader,
     commonFooter,
-    commonList
+    commonList,
+    footerGuide
   },
   computed: {
     ...mapGetters([

@@ -1,6 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+import App from '../App'
+import home from '@/pages/home/home'
+import investment from '@/pages/investment/investment'
+import investmentDetail from '@/pages/investment/children/detail'
+import usercenter from '@/pages/usercenter/usercenter'
+import login from '@/pages/usercenter/children/login'
+import register from '@/pages/usercenter/children/register'
+import findpwd from '@/pages/usercenter/children/findpwd'
+import about from '@/pages/about/about'
+
 Vue.use(Router)
+
 // 需要左方向动画的路由用this.$router.to('****')
 Router.prototype.togo = function (path) {
   this.isleft = true
@@ -29,66 +41,53 @@ Router.prototype.togoin = function () {
   this.isright = false
   this.isleft = true
 }
+
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: (resolve) => require(['@/pages/index'], resolve),
-      redirect: '/home',
+      component: App,
       children: [
+        {
+          path: '',
+          name: 'home',
+          component: home
+        },
         {
           path: '/home',
           name: 'home',
-          component: (resolve) => require(['@/pages/index/home'], resolve)
+          component: home
         },
         {
           path: '/investment',
-          name: 'investment',
-          component: (resolve) => require(['@/pages/index/investment'], resolve)
+          name: 'invesetment',
+          component: investment,
+          children: [{
+            path: 'detail',
+            component: investmentDetail
+          }]
         },
         {
           path: '/usercenter',
           name: 'usercenter',
-          component: (resolve) => require(['@/pages/index/usercenter'], resolve)
+          component: usercenter
         },
-        {
-          path: '/day',
-          name: 'day',
-          component: (resolve) => require(['@/pages/index/day'], resolve)
-        }
-      ]
-    },
-    {
-      path: '/Home/Detail',
-      name: 'Detail',
-      component: (resolve) => require(['@/pages/detail'], resolve)
-    },
-    {
-      path: '/Investment/Detail',
-      name: 'Detail',
-      component: (resolve) => require(['@/pages/investment/detail'], resolve)
-    },
-    {
-      path: '/usercenter',
-      name: 'usercenter',
-      component: (resolve) => require(['@/pages/index'], resolve),
-      redirect: '/usercenter',
-      children: [
         {
           path: '/login',
-          name: 'login',
-          component: (resolve) => require(['@/pages/usercenter/login'], resolve)
+          component: login
         },
         {
-          path: '/register',
-          name: 'register',
-          component: (resolve) => require(['@/pages/usercenter/register'], resolve)
+          path: 'register',
+          component: register
         },
         {
-          path: '/findpwd',
-          name: 'findpwd',
-          component: (resolve) => require(['@/pages/usercenter/findpwd'], resolve)
+          path: 'findpwd',
+          component: findpwd
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: about
         }
       ]
     }
