@@ -63,6 +63,34 @@ export default new Router({
       path: '/Home/Detail',
       name: 'Detail',
       component: (resolve) => require(['@/pages/detail'], resolve)
+    },
+    {
+      path: '/Investment/Detail',
+      name: 'Detail',
+      component: (resolve) => require(['@/pages/investment/detail'], resolve)
+    },
+    {
+      path: '/usercenter',
+      name: 'usercenter',
+      component: (resolve) => require(['@/pages/index'], resolve),
+      redirect: '/usercenter',
+      children: [
+        {
+          path: '/login',
+          name: 'login',
+          component: (resolve) => require(['@/pages/usercenter/login'], resolve)
+        },
+        {
+          path: '/register',
+          name: 'register',
+          component: (resolve) => require(['@/pages/usercenter/register'], resolve)
+        },
+        {
+          path: '/findpwd',
+          name: 'findpwd',
+          component: (resolve) => require(['@/pages/usercenter/findpwd'], resolve)
+        }
+      ]
     }
   ]
 })

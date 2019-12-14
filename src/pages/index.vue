@@ -29,7 +29,7 @@ export default {
           'name': '投资项目'
         },
         {
-          'path': '/footprints',
+          'path': '/usercenter',
           'name': '会员中心'
         },
         {
