@@ -6,6 +6,7 @@
       <common-footer></common-footer>
       <footer-guide></footer-guide>
     </div>
+    <router-view></router-view>
   </div>
 </template>
 

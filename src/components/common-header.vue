@@ -68,7 +68,7 @@ export default {
   width: 100%;
   .h(100);
   .lh(100);
-  background-color: @base-color;
+  background-color: @mainColor;
   color: @base-header-color;
   .fs(@base-header-size);
   display: flex;

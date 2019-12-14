@@ -28,7 +28,7 @@
       </div>
       <div class="m-buy flex flex-ac flex-js">
         <div class='total-price'>项目规模：1800</div>
-        <div class="buy">立即购买</div>
+        <router-link class="buy" to="/investment/detail">立即购买</router-link>
       </div>
       <div class="m-progress flex flex-ac flex-js">
         <div>项目进度：</div>
@@ -63,6 +63,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    // handleToDetail() {
+    //   this.$router.togo('/investment/detail')
+    // }
   }
 }
 </script>

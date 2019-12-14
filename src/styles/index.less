@@ -1,11 +1,9 @@
 @import "./reset.less";
 @import "./mixin.less";
 @import "./base.less";
+
 .backfff {
     .bg(#fff);
-}
-.page-content {
-    .mb(98);
 }
 .mb30 {
     .mb(30);
@@ -13,7 +11,12 @@
 .main-color {
     .color(@mainColor);
 }
-
+.content-box-fixed {
+    position: fixed;
+    width: 100%;
+    background: #EDEFF2;
+    z-index: 9;
+}
 /*flex 布局样式*/
 .flex {
     .flex();

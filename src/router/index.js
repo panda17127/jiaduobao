@@ -77,11 +77,11 @@ export default new Router({
           component: login
         },
         {
-          path: 'register',
+          path: '/register',
           component: register
         },
         {
-          path: 'findpwd',
+          path: '/findpwd',
           component: findpwd
         },
         {
